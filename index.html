@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Recognition</title>
     <link rel="stylesheet" href="Styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
+    <div id="center-body">
+        <h1>Movie Recognition</h1>
+        <p class="intro-sub">Upload an image to find matching movies.</p>
 
-    <h1>Movie Recognition</h1>
-    <p>Upload an image to find matching movies:</p>
+        <div class="container">
+            <div class="upload-buttons">
+                <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                <label for="imageInput" class="custom-file-upload">
+                    <span class="material-symbols-rounded">
+                        add_photo_alternate
+                    </span>
+                    <p>Upload image</p>
+                </label>
+                <button id="submitButton" onclick="submitImage()">
+                    <span class="material-symbols-rounded">
+                        check_circle
+                    </span>
+                    <p id="submitButtonLabel">Submit image</p>
+                    <div id="loading" style="display:none;">Loading...</div>
+                </button>
+            </div>
+            <div class="image-preview" id="imagePreview">
+                <p>Preview will be displayed here</p>
+            </div>
 
-    <div class="container">
-        <input type="file" id="imageInput" accept="image/*">
-        <div class="image-preview" id="imagePreview"></div>
-        <button id="submitButton" onclick="submitImage()">Submit</button>
-        <div id="loading" style="display:none;">Loading...</div>
+        </div>
+
+        <div class="movie-results" id="movieResults"></div>
+
+        <script src="Scripts.js"></script>
     </div>
-
-    <div class="movie-results" id="movieResults"></div>
-
-    <script src="Scripts.js"></script>
 </body>
+
 </html>
