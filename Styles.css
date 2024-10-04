@@ -1,0 +1,31 @@
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+.container {
+    margin-top: 50px;
+}
+.image-preview {
+    margin: 20px 0;
+}
+.image-preview img {
+    max-width: 300px;
+    height: auto;
+}
+.movie-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.movie-item {
+    margin: 10px;
+    text-align: center;
+}
+.movie-item img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

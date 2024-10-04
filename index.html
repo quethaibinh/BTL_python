@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recognition</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+    <h1>Movie Recognition</h1>
+    <p>Upload an image to find matching movies:</p>
+
+    <div class="container">
+        <input type="file" id="imageInput" accept="image/*">
+        <div class="image-preview" id="imagePreview"></div>
+        <button id="submitButton" onclick="submitImage()">Submit</button>
+        <div id="loading" style="display:none;">Loading...</div>
+    </div>
+
+    <div class="movie-results" id="movieResults"></div>
+
+    <script src="Scripts.js"></script>
+</body>
+</html>
