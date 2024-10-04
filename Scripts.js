@@ -19,7 +19,8 @@ const imageInput = document.getElementById('imageInput');
                 return;
             }
 
-            loading.style.display = 'block'; 
+            loading.style.display = 'block';
+            submitButtonLabel.style.display = 'none';
             movieResults.innerHTML = ''; 
 
             const formData = new FormData();
@@ -41,5 +42,6 @@ const imageInput = document.getElementById('imageInput');
                 alert('Failed to submit the image: ' + error.message);
             } finally {
                 loading.style.display = 'none';
+                submitButtonLabel.style.display = 'block';
             }
         }
